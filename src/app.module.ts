@@ -1,4 +1,8 @@
 import { Module } from '@nestjs/common';
 
-@Module({})
+import { WeightModule } from './weight/weight.module';
+
+@Module({
+	imports: [WeightModule],
+})
 export class AppModule {}
