@@ -1,4 +1,5 @@
 import { Controller } from "@nestjs/common";
+
 import { WeightService } from "./weight.service";
 
 @Controller('weights')
