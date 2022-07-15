@@ -6,6 +6,8 @@ import {
 
 import mongoose from 'mongoose';
 
+import { User } from '../../user/schema/user.schema';
+
 @Schema()
 export class Weight {
 	@Prop({ required: true })
@@ -24,6 +26,12 @@ export class Weight {
 		month: number;
 		year: number;
 	};
+
+	@Prop({
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'User',
+	})
+	public user: User;
 }
 
 export type WeightDocument = Weight & mongoose.Document;
