@@ -1,7 +1,7 @@
 import { ObjectId } from 'mongoose';
 
 export class WeightDto {
-	public readonly id: ObjectId;
+	public readonly userId: ObjectId;
 
 	public readonly value: number;
 

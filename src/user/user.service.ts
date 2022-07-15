@@ -1,4 +1,9 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import {
+	HttpException,
+	HttpStatus,
+	Injectable,
+} from '@nestjs/common';
+
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, ObjectId } from 'mongoose';
 
@@ -14,9 +19,7 @@ export class UserService {
 
 	public async create(dto: UserDto): Promise<User> {
 		try {
-			const newUser = await this._userModel.create({ ...dto });
-
-			return newUser;
+			return await this._userModel.create({ ...dto });
 		} catch (error) {
 			throw new HttpException(
 				'Internal server error',
@@ -27,9 +30,7 @@ export class UserService {
 
 	public async findAll(): Promise<User[]> {
 		try {
-			const users = await this._userModel.find();
-
-			return users;
+			return await this._userModel.find();
 		} catch (error) {
 			throw new HttpException(
 				'Internal server error',

@@ -1,6 +1,7 @@
 import { Module } from "@nestjs/common";
 import { MongooseModule } from '@nestjs/mongoose';
 
+import { User, UserSchema } from "../user/schema/user.schema";
 import { Weight, WeightSchema } from './schema/weight.schema';
 import { WeightController } from "./weight.controller";
 import { WeightService } from "./weight.service";
@@ -11,6 +12,10 @@ import { WeightService } from "./weight.service";
 			{
 				name: Weight.name,
 				schema: WeightSchema,
+			},
+			{
+				name: User.name,
+				schema: UserSchema,
 			},
 		]),
 	],
