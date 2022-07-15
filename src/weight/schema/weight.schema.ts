@@ -11,7 +11,14 @@ export class Weight {
 	@Prop({ required: true })
 	public value: number;
 
-	@Prop({ required: true })
+	@Prop({
+		required: true,
+		type: {
+			day: Number,
+			month: Number,
+			year: Number,
+		},
+	})
 	public time: {
 		day: number;
 		month: number;
