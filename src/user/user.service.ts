@@ -30,7 +30,7 @@ export class UserService {
 
 	public async findAll(): Promise<User[]> {
 		try {
-			return await this._userModel.find();
+			return await this._userModel.find().populate('weights');
 		} catch (error) {
 			throw new HttpException(
 				'Internal server error',
