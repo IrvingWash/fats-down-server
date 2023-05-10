@@ -1,10 +1,13 @@
 import {
 	Column,
 	Entity,
+	OneToMany,
 	PrimaryGeneratedColumn,
 } from 'typeorm';
 
 import { Exclude } from 'class-transformer';
+
+import { Weight } from 'src/weight/weight.entity';
 
 @Entity()
 export class User {
@@ -27,4 +30,7 @@ export class User {
 	@Exclude()
 	@Column({ nullable: true })
 	public refreshToken?: string;
+
+	@OneToMany(() => Weight, (weight) => weight.user)
+	public weights: Weight[];
 }

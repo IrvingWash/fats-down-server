@@ -17,7 +17,9 @@ export class UserService {
 	public async getAllUsers(accessToken: string): Promise<User[]> {
 		await this._getUser(accessToken);
 
-		return this._userRepository.find();
+		return this._userRepository.find({
+			relations: { weights: true },
+		});
 	}
 
 	private async _getUser(accessToken: string): Promise<User> {
