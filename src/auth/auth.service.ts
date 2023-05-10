@@ -5,11 +5,15 @@ import { Repository } from 'typeorm';
 import { User } from 'src/user/user.entity';
 import { todo } from 'src/utils/helpers';
 
+import { TokenService } from './token.service';
+
 @Injectable()
 export class AuthService {
 	public constructor(
 		@InjectRepository(User)
-		private readonly _userEntity: Repository<User>
+		private readonly _userEntity: Repository<User>,
+
+		private readonly _tokenService: TokenService,
 	) {}
 
 	public async signIn(): Promise<unknown> {
