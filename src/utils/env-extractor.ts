@@ -3,6 +3,10 @@ import { ensureDefined } from './helpers';
 enum EnvVariable {
 	Port = 'PORT',
 	ClientURL = 'CLIENT_URL',
+
+	AccessSecret = 'ACCESS_SECRET',
+	RefreshSecret = 'REFRESH_SECRET',
+
 	DBType = 'DB_TYPE',
 	DBHost = 'DB_HOST',
 	DBPort = 'DB_PORT',
@@ -21,6 +25,14 @@ export class EnvExtractor {
 
 	public static get clientURL(): string {
 		return this._getVariable(EnvVariable.ClientURL);
+	}
+
+	public static get accessSecret(): string {
+		return this._getVariable(EnvVariable.AccessSecret);
+	}
+
+	public static get refreshSecret(): string {
+		return this._getVariable(EnvVariable.RefreshSecret);
 	}
 
 	public static get dbType(): DBType {
