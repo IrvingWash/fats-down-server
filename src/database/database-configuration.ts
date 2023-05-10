@@ -1,5 +1,6 @@
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
 
+import { User } from 'src/user/user.entity';
 import { EnvExtractor } from 'src/utils/env-extractor';
 
 export class DatabaseConfiguration implements TypeOrmOptionsFactory {
@@ -11,7 +12,7 @@ export class DatabaseConfiguration implements TypeOrmOptionsFactory {
 			database: EnvExtractor.dbName,
 			username: EnvExtractor.dbUser,
 			password: EnvExtractor.dbPassword,
-			entities: [],
+			entities: [User],
 			synchronize: EnvExtractor.dbSynchronize,
 		};
 	}

@@ -1,4 +1,9 @@
-import { INestApplication, Logger, ValidationPipe } from '@nestjs/common';
+import {
+	INestApplication,
+	Logger,
+	ValidationPipe,
+} from '@nestjs/common';
+
 import { NestFactory } from '@nestjs/core';
 import * as parseCookies from 'cookie-parser';
 
