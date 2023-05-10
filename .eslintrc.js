@@ -26,5 +26,6 @@ module.exports = {
 		'no-multiple-empty-lines': ['error', { "max": 1 }],
 		'no-trailing-spaces': ['error'],
 		'quotes': ['error', 'single'],
+		'indent': ['error', 'tab']
 	},
 };
