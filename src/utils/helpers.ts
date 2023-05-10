@@ -5,3 +5,7 @@ export function ensureDefined<T>(value: T | undefined, message?: string): T {
 
 	return value;
 }
+
+export function todo(): never {
+	throw new Error('Todo');
+}
