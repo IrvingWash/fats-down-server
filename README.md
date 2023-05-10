@@ -1,4 +1,4 @@
-# Fats Down server
+# FatsDown server
 
 ## Environment variables
 | Name           | Description                                                                                   | Example             |
