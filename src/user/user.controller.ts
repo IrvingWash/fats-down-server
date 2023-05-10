@@ -24,7 +24,7 @@ export class UserController {
 		this._tokenParser = new TokenParser();
 	}
 
-	@Get()
+	@Get('all')
 	public getAllUsers(
 		@Req()
 			request: Request
