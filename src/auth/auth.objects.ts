@@ -6,8 +6,14 @@ export interface Tokens {
 }
 
 export interface GenerateTokensPayload {
-	username: string;
 	email: string;
+	username: string;
 }
 
 export interface TokenVerificationResult extends JwtPayload, GenerateTokensPayload {}
+
+export interface AuthResult {
+	username: string;
+	email: string;
+	tokens: Tokens;
+}
