@@ -15,14 +15,14 @@ export class UserService {
 	) {}
 
 	public async getAllUsers(accessToken: string): Promise<User[]> {
-		await this._getUser(accessToken);
+		await this.getUser(accessToken);
 
-		return this._userRepository.find({
+		return await this._userRepository.find({
 			relations: { weights: true },
 		});
 	}
 
-	private async _getUser(accessToken: string): Promise<User> {
+	public async getUser(accessToken: string): Promise<User> {
 		const validationResult = this._tokenService.validateAccessToken(accessToken);
 
 		const user = await this._userRepository.findOneBy({

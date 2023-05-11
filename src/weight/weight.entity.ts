@@ -12,7 +12,7 @@ import { User } from 'src/user/user.entity';
 @Entity()
 export class Weight {
 	@PrimaryGeneratedColumn()
-	public id: string;
+	public id: number;
 
 	@Column()
 	public value: number;
