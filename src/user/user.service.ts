@@ -14,9 +14,7 @@ export class UserService {
 		private readonly _tokenService: TokenService
 	) {}
 
-	public async getAllUsers(accessToken: string): Promise<User[]> {
-		await this.getUser(accessToken);
-
+	public async getAllUsers(): Promise<User[]> {
 		return await this._userRepository.find({
 			relations: { weights: true },
 		});
