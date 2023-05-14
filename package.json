@@ -2,9 +2,13 @@
 	"name": "fats-down-server",
 	"version": "0.0.1",
 	"description": "",
-	"author": "",
+	"author": "WI",
+	"license": "ISC",
 	"private": true,
-	"license": "UNLICENSED",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/IrvingWash/fats-down-server-2.0"
+	},
 	"scripts": {
 		"prebuild": "rimraf dist",
 		"build": "nest build",
