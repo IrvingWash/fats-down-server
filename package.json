@@ -7,7 +7,7 @@
 	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/IrvingWash/fats-down-server-2.0"
+		"url": "https://github.com/IrvingWash/fats-down-server"
 	},
 	"scripts": {
 		"prebuild": "rimraf dist",
